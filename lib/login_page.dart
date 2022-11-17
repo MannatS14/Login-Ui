@@ -78,39 +78,57 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: 20),
 
             //sign in
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25.0),
-              child: Container(
-                padding: EdgeInsets.all(20.0),
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(12)),
-                child: Center(
-                  child: Text(
-                    'Sign In',
-                    style: GoogleFonts.basic(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
+            SizedBox(
+              height: 50,
+              width: 375,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text('Sign In'),
+                style: ElevatedButton.styleFrom(
+                  elevation: 40,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 25),
+
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            //   child: Container(
+            //     padding: EdgeInsets.all(20.0),
+            //     decoration: BoxDecoration(
+            //         color: Colors.blue,
+            //         borderRadius: BorderRadius.circular(12)),
+            //     child: Center(
+            //       child: Text(
+            //         'Sign In',
+            //         style: GoogleFonts.basic(
+            //           color: Colors.white,
+            //           fontWeight: FontWeight.bold,
+            //           fontSize: 18,
+            //         ),
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            SizedBox(height: 20),
 
             //not a member
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('Not a Member? '),
-                Text(
-                  ' Register Here!',
-                  style: TextStyle(
-                      color: Colors.blue, fontWeight: FontWeight.bold),
+                SizedBox(
+                  child: TextButton(
+                      onPressed: () {}, child: const Text(' Register Here!')),
+
+                  //   style: TextStyle(
+                  //       color: Colors.blue, fontWeight: FontWeight.bold),
+                  // ),
                 )
               ],
             ),
