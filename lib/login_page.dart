@@ -10,6 +10,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+   TextEditingController emailController = TextEditingController();
+   TextEditingController passwordController = TextEditingController();
+  @override
+  void dispose() {
+    
+    emailController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,6 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20.0),
                   child: TextField(
+                    controller: emailController,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Email',
@@ -67,7 +76,8 @@ class _LoginPageState extends State<LoginPage> {
                     borderRadius: BorderRadius.circular(20.0)),
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20.0),
-                  child: TextField(
+                  child: TextFormField(
+                    // controller: passwordController,
                     obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
