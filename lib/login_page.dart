@@ -10,14 +10,14 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-   TextEditingController emailController = TextEditingController();
-   TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   @override
   void dispose() {
-    
     emailController.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -128,6 +128,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 20),
 
             //not a member
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -139,7 +140,25 @@ class _LoginPageState extends State<LoginPage> {
                   //   style: TextStyle(
                   //       color: Colors.blue, fontWeight: FontWeight.bold),
                   // ),
-                )
+                ),
+              ],
+            ),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  children: [
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text('GOOGLE'),
+                    ),
+                    TextButton(
+                      onPressed: (() {}),
+                      child: const Text("GITHUB"),
+                    )
+                  ],
+                ),
               ],
             ),
           ]),
